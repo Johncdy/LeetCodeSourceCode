@@ -2,7 +2,8 @@
 
 using namespace std;
 
-
+class Solution {
+public:
     bool isPalindrome(int x) {
         if (x < 0) { return false; }
 
@@ -26,8 +27,10 @@ using namespace std;
 		
 		return true;
     };
+};
 
 int main(int argc, char *argv[]) {
-	bool IsTest = isPalindrome(10);
+	Solution* s = new Solution;
+	bool IsTest = s->isPalindrome(10);
 	cout << IsTest << endl;
 }
