@@ -27,26 +27,41 @@ public:
 			return 0;
 		}
 		
-		vector<TreeNode*> vec;
-		int depth = 0;
-		vec.push_back(root);
-		int cur = 0;
-		int last = 1;
-		while (cur < vec.size()) {
-			last = vec.size();
-			while (cur < last) {
-				if (vec[cur]->left) {
-					vec.push_back(vec[cur]->left);
-				}
-				if (vec[cur]->right) {
-					vec.push_back(vec[cur]->right);
-				}
-				cur++;
-			}
-			depth++;
-		}
-		return depth;
-    }
+//		vector<TreeNode*> vec;
+//		int depth = 0;
+//		vec.push_back(root);
+//		int cur = 0;
+//		int last = 1;
+//		while (cur < vec.size()) {
+//			last = vec.size();
+//			while (cur < last) {
+//				if (vec[cur]->left) {
+//					vec.push_back(vec[cur]->left);
+//				}
+//				if (vec[cur]->right) {
+//					vec.push_back(vec[cur]->right);
+//				}
+//				cur++;
+//			}
+//			depth++;
+//		}
+//		return depth;
+//    }
+//	queue<TreeNode*> que;
+//	int depth = 0;
+//	que.push(root);
+//	while (!que.empty()) {
+//		TreeNode *node = que.front();
+//		que.pop();
+//		if (node->left) {
+//			que.push(node->left);
+//		}
+//		if (node->right) {
+//			que.push(node->right);
+//		}
+//	}
+	
+//	return max(maxDepth(root->left), maxDepth(root->right))+1;
 };
 
 int main(int argc, char *argv[]) {
