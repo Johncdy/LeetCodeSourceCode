@@ -5,30 +5,60 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int> > permute(vector<int> &num) {
-    	ans.clear();
-		if (num.size() == 0) {
-			return ans;
-		}
-		perm(num, 0);
-		return ans;
-    }
+// 排列解法
+//    vector<vector<int> > permute(vector<int> &num) {
+//    	ans.clear();
+//		if (num.size() == 0) {
+//			return ans;
+//		}
+//		perm(num, 0);
+//		return ans;
+//    }
+//
+//	void perm(vector<int> &num, int begin) {
+//		if (begin == num.size()) {
+//			ans.push_back(num);
+//			return;
+//		} else {
+//			for (int i = begin; i < num.size(); i++) {
+//				swap(num[begin], num[i]);
+//				perm(num, begin+1);
+//				swap(num[begin], num[i]);
+//			}
+//		}
+//	}
 
-	void perm(vector<int> &num, int begin) {
-		if (begin == num.size()) {
-			ans.push_back(num);
-			return;
-		} else {
-			for (int i = begin; i < num.size(); i++) {
-				swap(num[begin], num[i]);
-				perm(num, begin+1);
-				swap(num[begin], num[i]);
-			}
-		}
-	}
+// NP递归解法
+//	vector<vector<int> > permute(vector<int> &num) {
+//		vector<vector<int> > ans; 
+//		if (num.size() == 0) {
+//			return ans;
+//		}
+//		bool used[num.size()];
+//		vector<int> item;
+//		perm(num, used, item, ans);
+//		
+//		return ans;
+//	}
+//	
+//	void perm(vector<int> &num, bool used[], vector<int> &item, vector<vector<int> > &res) {
+//		if (item.size() == num.size()) {
+//			res.push_back(item);
+//			return;
+//		}
+//		for (int i = 0; i < num.size(); i++) {
+//			if (!used[i]) {
+//				used[i] = true;
+//				item.push_back(num[i]);
+//				perm(num, used, item, res);
+//				item.pop_back();
+//				used[i] = false;	
+//			}
+//		}
+//	}
 
-private:
-	vector<vector<int> > ans;
+//private:
+//	vector<vector<int> > ans;
 };
 
 int main(int argc, char *argv[]) {
