@@ -30,7 +30,16 @@ public:
     }
 };
 
+class A {
+public:
+	 explicit A(int n) {
+		s = n;
+	}
+	
+private:
+	int s;
+};
+
 int main(int argc, char *argv[]) {
 	Solution *s = new Solution;
-	
 }
