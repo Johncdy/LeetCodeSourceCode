@@ -124,8 +124,8 @@ int main(int argc, char *argv[]) {
 	b9->next = b10;
 	
 	ListNode *c1 = s->addTwoNumbers(a1, b1);
-	while (c1) {
-		cout << c1->val << endl;
-		c1 = c1->next;
-	}
+//	while (c1) {
+//		cout << c1->val << endl;
+//		c1 = c1->next;
+//	}
 }

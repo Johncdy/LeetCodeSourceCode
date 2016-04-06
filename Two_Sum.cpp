@@ -51,8 +51,8 @@ public:
 		while (start != end) {
 			int sum = array[start].val + array[end].val;
 			if (sum == target) {
-				result.push_back(min(array[start].pos+1, array[end].pos+1));
-				result.push_back(max(array[start].pos+1, array[end].pos+1));
+				result.push_back(min(array[start].pos, array[end].pos));
+				result.push_back(max(array[start].pos, array[end].pos));
 				break;
 			} else if (sum < target) {
 				start++;
